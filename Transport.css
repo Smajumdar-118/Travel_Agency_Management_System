@@ -1,0 +1,164 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.text-center{
+    align-items: center;
+}
+.btn{
+    padding: 6px 20px;
+    background-color: aqua;
+    border: 4px solid white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+    height: 59px;
+    width: 59px;
+    margin: 3px 6px;
+
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    padding: 0px 20px;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    text-decoration: none;
+    border-radius: 18px;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 656px;
+}
+#intro::before{
+         background: url(https://www.udantravel.com/upload/udan73759Car%20rental%20delhi%20slider.jpg)no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; 
+        opacity: 0.7; 
+}
+
+ 
+
+section img{
+    width: 100%;
+    height: 100%;
+}
+#services{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(189 181 241)
+    
+    
+}
+.item img{
+    height: 12.5rem;
+    width: 19.5rem;
+}
+.container{
+    display: flex;
+    /* flex-direction: row; */
+    margin: 64px 0px;
+    text-align: center;
+    justify-content: right
+    
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    margin: 64px 0px;
+    text-align: center;
+    justify-content: center
+    
+}
+.item{
+    text-align: right;
+    padding: 0px 60px;
+}
+.desc{
+    display: flex;
+    text-align: center;
+    width: 80%;
+    justify-content: center;
+    font-size: 48px;
+    background-color: pink;
+    
+}
+.p-head{
+    font-size: 36px;
+}
+#contact{
+    text-align: center;
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url(https://img.freepik.com/premium-photo/contact-us-customer-support-hotline-people-connect-call-customer-support-email-address-live-chat-internet-wifi_36325-3415.jpg?w=2000)no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+
+
+}
+.container2 div{
+    margin: 11px 0px;
+    font-size: 24px
+}
+.center{
+    text-align: center;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+}
