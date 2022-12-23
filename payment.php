@@ -279,6 +279,7 @@ $rno=$row['Reg_No'];
                                     <p class="mb-0"><span class="fw-bold">Booked Car :  &nbsp&nbsp</span><span class="c-green"><?php
                                                 
                                                 echo $_SESSION['cars'];
+                                                
                                                 ?></span>
                                     </p>
                                     <p class="mb-0">
@@ -341,7 +342,7 @@ $rno=$row['Reg_No'];
             </div>
             <div class="col-12">
                 <div class="btn btn-primary payment">
-                    <a href="payment_confirmation.html">Make Payment</a>
+                    <a href="payment_confirmation.php">Make Payment</a>
                 </div>
             </div>
         </div>

@@ -11,10 +11,7 @@
 </head>
 
 <body>
-<?php
-    session_start();
-    echo $_SESSION['username'];
-    ?>
+
     <nav id="navbar">
         <div id="logo">
             <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg"

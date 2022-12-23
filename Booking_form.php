@@ -54,6 +54,7 @@ if($result){
 session_start();
 $_SESSION['cars'] = $cars;
 $_SESSION['rno'] = $rno;
+$_SESSION['userid'] = $idno;
 header("location: payment.php");
 }
 
