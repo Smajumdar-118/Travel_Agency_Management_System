@@ -238,8 +238,8 @@ header("location: payment.php");
             <div class="form-group">
                 <label for="ac">Choose an Option : </label>
                 <select name="ac" name="ac">
-                    <option value="ac" selected>AC</option>
-                    <option value="nonac">Non AC</option>
+                    <option value="AC" selected>AC</option>
+                    <option value="Non AC">Non AC</option>
 
                 </select>
             </div>

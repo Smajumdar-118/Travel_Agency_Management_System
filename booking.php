@@ -1,12 +1,4 @@
-<?php
-include '_dbconnect.php';
-session_start();
-$id = $_SESSION['username'];
-$sql = "select * from customer where user_id = '$id' ";
-$query = mysqli_query($conn,$sql) or die("Unsucessful");
-$row = mysqli_fetch_assoc($query);
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,15 +46,30 @@ $row = mysqli_fetch_assoc($query);
 
     <div class="container4">
         <h1>Your Booking Details are : </h1>
-        <div class="item4">Name : <?php echo $row['name'] ?></div>
-        <div class="item4">Idno : <?php echo $row['customer_id'] ?></div>
-        <div class="item4">No of passengers : <?php echo $row['no_of_passengers'] ?></div>
-        <div class="item4">Car name : <?php echo $row['car_name'] ?></div>
-        <div class="item4">Accomodation : <?php echo $row[' accommodation'] ?></div>
-        <div class="item4">Booking Date : <?php echo $row['From_Date'] ?></div>
-        <div class="item4">Pick Up Location : <?php echo $row['pickup'] ?></div>
-        <div class="item4">Destination : <?php echo $row['destination'] ?></div>
-    </div class="container4">
+        <?php
+include '_dbconnect.php';
+session_start();
+$id = $_SESSION['username'];
+$sql = "select * from customer where user_id = '$id' ";
+$query = mysqli_query($conn,$sql) or die("Unsucessful");
+$row = mysqli_fetch_assoc($query);
+$num=mysqli_num_rows($query);
+if($num==1){
+    echo '<div class="item4" >Name :  ' .$row['name']. '</div>';
+    echo '<div class="item4" >Idno :  ' .$row['customer_id']. '</div>';
+    echo '<div class="item4" >passengers :  ' .$row['no_of_passengers']. '</div>';
+    echo '<div class="item4" >Car Name :  ' .$row['car_name']. '</div>';
+    echo '<div class="item4" >Accomodation :  ' .$row[' accommodation']. '</div>';
+    echo '<div class="item4" >Booking Date :  ' .$row['From_Date']. '</div>';
+    echo '<div class="item4" >Pick Up Location :  ' .$row['pickup']. '</div>';
+    echo '<div class="item4" >Destination :  ' .$row['destination']. '</div>';
+    
+}
+else{
+   echo '<div class = "item4" >Sorry ! No Data Found</div>';
+}
+?>
+</div class="container4">
 
 
 </body>

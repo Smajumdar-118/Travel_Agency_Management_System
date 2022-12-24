@@ -1,12 +1,12 @@
 <?php
-if(isset($_POST['rate'])){
     include '_dbconnect.php';
+if(isset($_POST['submit'])){
     session_start();
     $rate = $_POST['rate'];
-    
-    $userid = $_SESSION['userid'];
-    $sql = "INSERT INTO `rating` (`customer_id`, `rating`) VALUES ('$userid', '$rate')";
-    $query = mysqli_query($conn,$sql) or die("Unsucessful");
+    $userid = $_SESSION['username'];
+
+    $sql5 = "INSERT INTO `rating` (`customer_id`, `rating`) VALUES ('$userid', '$rate')";
+    $query = mysqli_query($conn,$sql5) or die("Unsucessful");
 }
 ?>
 
@@ -70,10 +70,7 @@ if(isset($_POST['rate'])){
     }
 </style>
 <body>
-    <!-- <?php
-    session_start();
-    $_SESSION['userid'];
-    ?> -->
+
     <div class="container">
         <img src="https://www.tutorialrepublic.com/snippets/designs/simple-success-confirmation-popup.png" alt="">
     </div>
