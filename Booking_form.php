@@ -23,8 +23,9 @@ $dest = $_POST['dest'];
 
 
 if(true){
-
-$sql = "INSERT INTO `customer` (`customer_id`, `name`, `no_of_passengers`, `vehicle_type`, `car_name`, ` accommodation`, `From_Date`, `To_Date`, `pickup`, `destination`, `age`) VALUES ('$idno', '$name', '$pno', '$vehicle', '$cars', '$ac', '$fdate', '$tdate', '$pickup', '$dest', '$age')";
+session_start();
+$user_id = $_SESSION['username'];
+$sql = "INSERT INTO `customer` (`customer_id`, `name`, `no_of_passengers`, `vehicle_type`, `car_name`, ` accommodation`, `From_Date`, `To_Date`, `pickup`, `destination`, `age`,`user_id`) VALUES ('$idno', '$name', '$pno', '$vehicle', '$cars', '$ac', '$fdate', '$tdate', '$pickup', '$dest', '$age','$user_id')";
 
 $result = mysqli_query($conn,$sql);
 

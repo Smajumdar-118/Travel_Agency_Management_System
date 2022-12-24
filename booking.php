@@ -1,8 +1,8 @@
 <?php
 include '_dbconnect.php';
 session_start();
-$id = $_SESSION['userid'];
-$sql = "select * from customer where customer_id = '$id' ";
+$id = $_SESSION['username'];
+$sql = "select * from customer where user_id = '$id' ";
 $query = mysqli_query($conn,$sql) or die("Unsucessful");
 $row = mysqli_fetch_assoc($query);
 
