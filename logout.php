@@ -4,6 +4,6 @@ session_start();
 session_unset();
 session_destroy();
 
-header("location: Transport.php");
+header("location: TravelWithUs.php");
 exit;
 ?>

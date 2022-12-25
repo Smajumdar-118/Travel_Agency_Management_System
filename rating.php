@@ -1,15 +1,16 @@
 <?php
     include '_dbconnect.php';
-if(isset($_POST['submit'])){
+    if(isset($_POST['name'])){
+    $rate = $_POST['name'];
     session_start();
-    $rate = $_POST['rate'];
     $userid = $_SESSION['username'];
+    $mysql = "INSERT INTO `rating` (`user_id`, `rating`) VALUES ('$userid', '$rate')";
+    $query = mysqli_query($conn,$mysql) or die("Unsucessful");
+    header("location: TravelWithUs2.php");
 
-    $sql5 = "INSERT INTO `rating` (`customer_id`, `rating`) VALUES ('$userid', '$rate')";
-    $query = mysqli_query($conn,$sql5) or die("Unsucessful");
 }
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,11 +63,10 @@ if(isset($_POST['submit'])){
     width: 127px;
     background-color: #f9ace3;
     }
-    a{
-        text-decoration: none;
-    }
-    a:hover{
+   
+    button:hover{
         color: #009688;
+        cursor: pointer;
     }
 </style>
 <body>
@@ -76,18 +76,18 @@ if(isset($_POST['submit'])){
     </div>
     <section>
         <div class="box">
-            <form action="payment_confirmation.php" method="POST">
-                <label for="rate">Please Rate Our Services : </label>
-                <select name="rate" id="rate"> 
-                    <option value=1>1</option>
-                    <option value=2>2</option>
-                    <option value=3>3</option>
-                    <option value=4>4</option>
+            <form action="rating.php" method = "post" >
+                <label for="name">Please rate our services : </label>
+                <select name="name" id="name">
                     <option value=5>5</option>
+                    <option value=4>4</option>
+                    <option value=3>3</option>
+                    <option value=2>2</option>
+                    <option value=1>1</option>
                 </select>
                 <div class="item">
 
-                    <button type="submit" class="btn"><a href="Transport2.php">Submit</a></button>
+                    <button type = "submit" class="btn">Submit</button>
                 </div>
             </form>
         </div>

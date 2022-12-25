@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
-    <link rel="stylesheet" href="Transport.css">
+    <link rel="stylesheet" href="TravelWithUs.css">
     <style>
         .container4{
             display: flex;
@@ -33,7 +32,7 @@
                 
         </div>
         <ul>
-            <li class="item"><a href="Transport2.php">Home</a></li>
+            <li class="item"><a href="TravelWithUs2.php">Home</a></li>
             <li class="item"><a href="#services">Services</a></li>
             <li class="item"><a href="signup.php">Sign Up</a></li>
             <li class="item"><a href="login.php">Log In</a></li>

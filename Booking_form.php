@@ -195,10 +195,10 @@ header("location: payment.php");
                 alt="MyMeal.com">
         </div>
         <ul>
-            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="TravelWithUs2.php">Home</a></li>
             <li class="item"><a href="#services">Services</a></li>
-            <li class="item"><a href="#">Sign Up/Log IN</a></li>
-            <li class="item"><a href="#contact">Contact Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+            <li class="item"><a href="#logout.php">Log Out</a></li>
 
         </ul>
     </nav>
@@ -228,7 +228,7 @@ header("location: payment.php");
                     <option value="">Select</option>
                 </select>
             </div>
-            <div classs="form-group">
+            <div class="form-group">
                 <label for="cars">Car Name : </label>
                 <select id="cars" name="cars">
                     <option value="">Select</option>

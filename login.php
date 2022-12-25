@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
       session_start();
       $_SESSION['loggedin'] = true;
       $_SESSION['username'] = $username;
-      header("location: Transport2.php");
+      header("location: TravelWithUs2.php");
     }
     else{
       $showError = "Invalid Credentials";
@@ -100,7 +100,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
       <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg" alt="MyMeal.com">
     </div>
     <ul>
-      <li class="item"><a href="Transport.php">Home</a></li>
+      <li class="item"><a href="TravelWithUs.php">Home</a></li>
       <li class="item"><a href="#">Services</a></li>
       <li class="item"><a href="#">About Us</a></li>
       <li class="item"><a href="signup.php">Sign Up</a></li>
