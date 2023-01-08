@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +8,49 @@
     <title>Booking</title>
     <link rel="stylesheet" href="TravelWithUs.css">
     <style>
-        .container4{
+        .container4 {
             display: flex;
             justify-content: center;
             text-align: center;
             flex-direction: column;
         }
-        h1{
-            margin: 40px 0px;
+
+        h1 {
+            color: #e508f1;
+    border: 2px solid black;
+    
+    background-color: #f1e0fc;
+    margin: 45px 572px;
+    border-radius: 25px;
         }
-        .item4{
+
+        .item4 {
             margin: 20px 0px;
             font-size: 29px;
         }
+
+        th {
+            border: 2px solid red;
+            padding: 13px 42px;
+            background-color: #66f448;
+            color: #0e08f3;
+            font-size: 24px;
+        }
+
+        td {
+            border: 2px solid red;
+            padding: 13px 42px;
+            font-size: 18px;
+            font-weight: bolder;
+            background-color: #1efafc;
+            color: #000000;
+        }
+        body{
+        
+        background: url(https://wallpaperaccess.com/full/195879.jpg) no-repeat center center fixed;
+        background-size: cover; 
+        
+    }
     </style>
 </head>
 
@@ -29,7 +59,7 @@
         <div id="logo">
             <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg"
                 alt="MyMeal.com">
-                
+
         </div>
         <ul>
             <li class="item"><a href="TravelWithUs2.php">Home</a></li>
@@ -54,22 +84,46 @@ $query = mysqli_query($conn,$sql) or die("Unsucessful");
 $row = mysqli_fetch_assoc($query);
 $num=mysqli_num_rows($query);
 if($num==1){
-    echo '<div class="item4" >Name :  ' .$row['name']. '</div>';
-    echo '<div class="item4" >Idno :  ' .$row['customer_id']. '</div>';
-    echo '<div class="item4" >passengers :  ' .$row['no_of_passengers']. '</div>';
-    echo '<div class="item4" >Car Name :  ' .$row['car_name']. '</div>';
-    echo '<div class="item4" >Accomodation :  ' .$row[' accommodation']. '</div>';
-    echo '<div class="item4" >Booking Date :  ' .$row['From_Date']. '</div>';
-    echo '<div class="item4" >Pick Up Location :  ' .$row['pickup']. '</div>';
-    echo '<div class="item4" >Destination :  ' .$row['destination']. '</div>';
+   
     
+    echo"<table>";
+        echo"<thead>
+            <tr>
+                <th>Name</th>
+                <th>Idno</th>
+                <th>passengers</th>
+                <th>Car Name</th>
+                <th>Booking Date</th>
+                <th>Pick Up Location</th>
+                <th>Destination</th>
+            </tr>
+
+        </thead>";
+        echo"<tbody>
+            <tr>";
+            echo "<td>" . $row['name'] . "</td>";
+            echo "<td>" . $row['customer_id'] . "</td>";
+            echo "<td>" . $row['no_of_passengers'] . "</td>";
+            echo "<td>" . $row['car_name'] . "</td>";
+            echo "<td>" . $row['From_Date'] . "</td>";
+            echo "<td>" . $row['pickup'] . "</td>";
+            echo "<td>" . $row['destination'] . "</td>";
+            
+            
+            echo"</tr>
+
+        </tbody>
+    </table>";
+
+
 }
 else{
    echo '<div class = "item4" >Sorry ! No Data Found</div>';
 }
 ?>
-</div class="container4">
+    </div class="container4">
 
 
 </body>
+
 </html>
