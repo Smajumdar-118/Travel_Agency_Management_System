@@ -20,7 +20,7 @@
     border: 2px solid black;
     
     background-color: #f1e0fc;
-    margin: 45px 572px;
+    margin: 32px 572px;
     border-radius: 25px;
         }
 
@@ -50,6 +50,19 @@
         background: url(https://wallpaperaccess.com/full/195879.jpg) no-repeat center center fixed;
         background-size: cover; 
         
+    }
+    table a{
+        text-decoration: none;
+    color: #fffdfc;
+    border: 4px solid white;
+    padding: 7px 11px;
+    border-radius: 24px;
+    background-color: #f50c3d
+    }
+    table a:hover{
+        color: black;
+    background-color: navajowhite;
+    border-color: red;
     }
     </style>
 </head>
@@ -96,11 +109,12 @@ if($num==1){
                 <th>Booking Date</th>
                 <th>Pick Up Location</th>
                 <th>Destination</th>
+                <th>Cancel Your Booking</th>
             </tr>
 
         </thead>";
-        echo"<tbody>
-            <tr>";
+        echo"<tbody>";
+            echo"<tr>";
             echo "<td>" . $row['name'] . "</td>";
             echo "<td>" . $row['customer_id'] . "</td>";
             echo "<td>" . $row['no_of_passengers'] . "</td>";
@@ -108,9 +122,10 @@ if($num==1){
             echo "<td>" . $row['From_Date'] . "</td>";
             echo "<td>" . $row['pickup'] . "</td>";
             echo "<td>" . $row['destination'] . "</td>";
+            echo "<td><a href='delete.php?rn=$row[customer_id]'>Cancel</a></td>
             
             
-            echo"</tr>
+           </tr>
 
         </tbody>
     </table>";
