@@ -77,8 +77,6 @@
         <ul>
             <li class="item"><a href="TravelWithUs2.php">Home</a></li>
             <li class="item"><a href="#services">Services</a></li>
-            <li class="item"><a href="signup.php">Sign Up</a></li>
-            <li class="item"><a href="login.php">Log In</a></li>
             <li class="item"><a href="#contact">Contact Us</a></li>
             <li class="item"><a href="logout.php">Log Out</a></li>
             <li class="item"><a href="booking.php">My Booking</a></li>
@@ -94,10 +92,10 @@ session_start();
 $id = $_SESSION['username'];
 $sql = "select * from customer where user_id = '$id' ";
 $query = mysqli_query($conn,$sql) or die("Unsucessful");
-$row = mysqli_fetch_assoc($query);
+
 $num=mysqli_num_rows($query);
-if($num==1){
-   
+if($num!=0){
+  
     
     echo"<table>";
         echo"<thead>
@@ -114,6 +112,7 @@ if($num==1){
 
         </thead>";
         echo"<tbody>";
+        while($row = mysqli_fetch_assoc($query)){ 
             echo"<tr>";
             echo "<td>" . $row['name'] . "</td>";
             echo "<td>" . $row['customer_id'] . "</td>";
@@ -125,9 +124,9 @@ if($num==1){
             echo "<td><a href='delete.php?rn=$row[customer_id]'>Cancel</a></td>
             
             
-           </tr>
-
-        </tbody>
+           </tr>";
+        }
+        echo"</tbody>
     </table>";
 
 
