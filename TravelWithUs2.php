@@ -21,8 +21,8 @@
         <ul>
             <li class="item"><a href="#">Home</a></li>
             <li class="item"><a href="#services">Services</a></li>
-            <li class="item"><a href="signup.php">Sign Up</a></li>
-            <li class="item"><a href="login.php">Log In</a></li>
+            <!-- <li class="item"><a href="signup.php">Sign Up</a></li>
+            <li class="item"><a href="login.php">Log In</a></li> -->
             <li class="item"><a href="#contact">Contact Us</a></li>
             <li class="item"><a href="logout.php">Log Out</a></li>
             <li class="item"><a href="booking.php">My Booking</a></li>

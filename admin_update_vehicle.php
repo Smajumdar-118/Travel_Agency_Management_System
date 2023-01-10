@@ -2,63 +2,23 @@
 if(isset($_POST['name'])){
 include '_dbconnect.php';
 $name = $_POST['name'];
-$age = $_POST['age'];
-$idno = $_POST['idno'];
-$pno = $_POST['pno'];
+$seats = $_POST['seats'];
+$regno = $_POST['regno'];
+
 $vehicle = $_POST['vehicle'];
-$ac = $_POST['ac'];
-
-$cars = $_POST["cars"];
-$sql2="select * from cars where name='$cars'";
-$query = mysqli_query($conn,$sql2) or die("Unsucessful");
-
-$row = mysqli_fetch_assoc($query);
-$rno=$row['Reg_No'];
 
 
-$fdate = $_POST['fdate'];
-$tdate = $_POST['tdate'];
-$pickup = $_POST['pickup'];
-$dest = $_POST['dest'];
-
-
-if(true){
-session_start();
-$user_id = $_SESSION['username'];
-$sql = "INSERT INTO `customer` (`customer_id`, `name`, `no_of_passengers`, `vehicle_type`, `car_name`, ` accommodation`, `From_Date`, `To_Date`, `pickup`, `destination`, `age`,`user_id`) VALUES ('$idno', '$name', '$pno', '$vehicle', '$cars', '$ac', '$fdate', '$tdate', '$pickup', '$dest', '$age','$user_id')";
+$sql="INSERT INTO `cars` (`v_id`, `Reg_No`, `seats`, `name`, `route_id`) VALUES ('$vehicle', '$regno', '$seats', '$name', NULL)";
 
 $result = mysqli_query($conn,$sql);
 
 
-if($result){
-    $sql="INSERT INTO `route` (`Pickup`, `Dest`) VALUES ('$pickup', '$dest')";
-    $result2 = mysqli_query($conn,$sql);
-    if($result2){
-    $sql4="select * from route where Pickup='$pickup' ";
-    $query = mysqli_query($conn,$sql4) or die("Unsucessful");
-    $row = mysqli_fetch_assoc($query);
-    $route=$row['Route_id'];
-    
-    if($result){
-        
-        
-        $sql3= "INSERT INTO `booked` (`Reg_No`, `name`, `Pickup`, `Dest`, `Fdate`, `Tdate`, `Route_id`, `customer_id`) VALUES ('$rno', '$cars', '$pickup', '$dest', '$fdate', '$tdate', '$route','$idno')";
-        $result2 = mysqli_query($conn,$sql3);
-        
-    }
-    }
+  
 
 
 
+header("location: admin_customize.php");
 }
-}
-session_start();
-$_SESSION['cars'] = $cars;
-$_SESSION['rno'] = $rno;
-$_SESSION['userid'] = $idno;
-header("location: payment.php");
-}
-
 
 ?>
 
@@ -195,32 +155,30 @@ header("location: payment.php");
                 alt="MyMeal.com">
         </div>
         <ul>
-            <li class="item"><a href="TravelWithUs2.php">Home</a></li>
-            <li class="item"><a href="#services">Services</a></li>
-            <li class="item"><a href="#">Contact Us</a></li>
-            <li class="item"><a href="#logout.php">Log Out</a></li>
+        <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="admin_update_vehicle.php">Customer Details</a></li>
+            <li class="item"><a href="admin_booking.php">Booking Details</a></li>
+            <li class="item"><a href="#">Customize Services</a></li>
+            <li class="item"><a href="logout.php">Log Out</a></li>
 
         </ul>
     </nav>
     <div class="container">
 
-        <form action="Booking_form.php" method="post">
+        <form action="admin_update_vehicle.php" method="post">
             <div class="form-group">
-                <label for="name">Name : </label>
+                <label for="name"> Car Name : </label>
                 <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="form-group">
-                <label for="age">Age : </label>
-                <input type="number" class="form-control" id="age" name="age">
+                <label for="seats">Seats Available : </label>
+                <input type="number" class="form-control" id="seats" name="seats">
             </div>
             <div class="form-group">
-                <label for="idno">Addhar No. : </label>
-                <input type="text" class="form-control" id="idno" name="idno">
+                <label for="regno">Reg No. : </label>
+                <input type="text" class="form-control" id="regno" name="regno">
             </div>
-            <div class="form-group">
-                <label for="pno">Number of Passenger : </label>
-                <input type="number" class="form-control" id="pno" name="pno">
-            </div>
+            
 
             <div class="form-group">
                 <label for="vehicle">Vehicle Type : </label>
@@ -228,38 +186,14 @@ header("location: payment.php");
                     <option value="">Select</option>
                 </select>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="cars">Car Name : </label>
                 <select id="cars" name="cars">
                     <option value="">Select</option>
                 </select>
-            </div>
+            </div> -->
 
-            <div class="form-group">
-                <label for="ac">Choose an Option : </label>
-                <select name="ac" name="ac">
-                    <option value="AC" selected>AC</option>
-                    <option value="Non AC">Non AC</option>
-
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="fdate">Booking Date(Form) : </label>
-                <input type="date" class="form-control" id="fdate" name="fdate">
-            </div>
-            <div class="form-group">
-                <label for="tdate">Booking Date(TO) : </label>
-                <input type="date" class="form-control" id="tdate" name="tdate">
-            </div>
-            <div class="form-group">
-                <label for="pickup">Pick Up Location : </label>
-                <input type="text" class="form-control" id="pickup" name="pickup">
-            </div>
-            <div class="form-group">
-                <label for="dest">Destination : </label>
-                <input type="text" class="form-control" id="dest" name="dest">
-            </div>
-            <button type="submit" class="btn">Register</button>
+            <button type="submit" class="btn">Add</button>
         </form>
     </div>
     <script type="text/javascript" src="/College Project/jquery.js"></script>

@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoveWithUs.com</title>
-    <link rel="stylesheet" href="TravelWithUS.css">
+    <link rel="stylesheet" href="TravelWithUs.css">
 
 </head>
 
 <body>
-    
+
     <nav id="navbar">
         <div id="logo">
             <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg"
@@ -19,18 +19,18 @@
                 
         </div>
         <ul>
-            <li class="item"><a href="TravelWithUs.php">Home</a></li>
-            <li class="item"><a href="#services">Services</a></li>
-            <li class="item"><a href="signup.php">Sign Up</a></li>
-            <li class="item"><a href="login.php">Log In</a></li>
-            <li class="item"><a href="#contact">Contact Us</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="admin_customer.php">Customer Details</a></li>
+            <li class="item"><a href="admin_booking.php">Booking Details</a></li>
+            <li class="item"><a href="#">Customize Services</a></li>
+            <li class="item"><a href="logout.php">Log Out</a></li>
 
         </ul>
     </nav>
 
     <section id="intro">
         <h1 class="p-head">Welcome To MoveWithUs.com</h1>
-        <button class="btn"><a href="login.php">Book Now</a></button>
+        <button class="btn"><a href="Booking_form.php">Book Now</a></button>
     </section>
     <section id="services">
         <div>

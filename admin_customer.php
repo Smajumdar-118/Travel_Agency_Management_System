@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
+    <title>Customer Details</title>
     <link rel="stylesheet" href="TravelWithUs.css">
     <style>
         .container4 {
@@ -81,22 +81,21 @@
 
         </div>
         <ul>
-            <li class="item"><a href="TravelWithUs2.php">Home</a></li>
-            <li class="item"><a href="#services">Services</a></li>
-            <li class="item"><a href="#contact">Contact Us</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="admin_customer.php">Customer Details</a></li>
+            <li class="item"><a href="admin_booking.php">Booking Details</a></li>
+            <li class="item"><a href="#">Customize Services</a></li>
             <li class="item"><a href="logout.php">Log Out</a></li>
-            <li class="item"><a href="booking.php">My Booking</a></li>
 
         </ul>
     </nav>
 
     <div class="container4">
-        <h1>Your Booking Details are : </h1>
+        <h1>Customer Details are : </h1>
         <?php
 include '_dbconnect.php';
 session_start();
-$id = $_SESSION['username'];
-$sql = "select * from customer where user_id = '$id' ";
+$sql = "select * from customer";
 $query = mysqli_query($conn,$sql) or die("Unsucessful");
 
 $num=mysqli_num_rows($query);
@@ -106,14 +105,11 @@ if($num!=0){
     echo"<table>";
         echo"<thead>
             <tr>
-                <th>Name</th>
+                <th>Customer Name</th>
                 <th>Idno</th>
-                <th>passengers</th>
-                <th>Car Name</th>
-                <th>Booking Date</th>
-                <th>Pick Up Location</th>
-                <th>Destination</th>
-                <th>Cancel Your Booking</th>
+                <th>No. of Passengers</th>
+                <th>Age</th>
+                <th>User Id</th>
             </tr>
 
         </thead>";
@@ -123,11 +119,8 @@ if($num!=0){
             echo "<td>" . $row['name'] . "</td>";
             echo "<td>" . $row['customer_id'] . "</td>";
             echo "<td>" . $row['no_of_passengers'] . "</td>";
-            echo "<td>" . $row['car_name'] . "</td>";
-            echo "<td>" . $row['From_Date'] . "</td>";
-            echo "<td>" . $row['pickup'] . "</td>";
-            echo "<td>" . $row['destination'] . "</td>";
-            echo "<td><a href='delete.php?rn=$row[customer_id]'>Cancel</a></td>
+            echo "<td>" . $row['age'] . "</td>";
+            echo "<td><a href='admin_delete.php?rn=$row[Reg_No]'>Remove</a></td>
             
             
            </tr>";
