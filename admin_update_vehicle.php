@@ -4,14 +4,19 @@ include '_dbconnect.php';
 $name = $_POST['name'];
 $seats = $_POST['seats'];
 $regno = $_POST['regno'];
+$fare = $_POST['fare'];
 
 $vehicle = $_POST['vehicle'];
 
 
-$sql="INSERT INTO `cars` (`v_id`, `Reg_No`, `seats`, `name`, `route_id`) VALUES ('$vehicle', '$regno', '$seats', '$name', NULL)";
+
+$sql="INSERT INTO `cars` (`v_id`, `Reg_No`, `seats`, `name`) VALUES ('$vehicle', '$regno', '$seats', '$name')";
 
 $result = mysqli_query($conn,$sql);
-
+if($result){
+    $sql2 = "INSERT INTO `fare` (`car_reg_no`, `fare`) VALUES ('$regno', '$fare')";
+    $result = mysqli_query($conn,$sql2);
+}
 
   
 
@@ -155,10 +160,10 @@ header("location: admin_customize.php");
                 alt="MyMeal.com">
         </div>
         <ul>
-        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="admin_customer.php">Home</a></li>
             <li class="item"><a href="admin_update_vehicle.php">Customer Details</a></li>
             <li class="item"><a href="admin_booking.php">Booking Details</a></li>
-            <li class="item"><a href="#">Customize Services</a></li>
+            <li class="item"><a href="admin_customize.php">Customize Services</a></li>
             <li class="item"><a href="logout.php">Log Out</a></li>
 
         </ul>
@@ -186,12 +191,11 @@ header("location: admin_customize.php");
                     <option value="">Select</option>
                 </select>
             </div>
-            <!-- <div class="form-group">
-                <label for="cars">Car Name : </label>
-                <select id="cars" name="cars">
-                    <option value="">Select</option>
-                </select>
-            </div> -->
+            <div class="form-group">
+                <label for="fare">Fare : </label>
+                <input type="number" class="form-control" id="fare" name="fare">
+            </div>
+            
 
             <button type="submit" class="btn">Add</button>
         </form>

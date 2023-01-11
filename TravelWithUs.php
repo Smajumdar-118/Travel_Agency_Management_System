@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoveWithUs.com</title>
-    <link rel="stylesheet" href="TravelWithUS.css">
+    <link rel="stylesheet" href="Travel.css">
 
 </head>
 
@@ -24,6 +24,7 @@
             <li class="item"><a href="signup.php">Sign Up</a></li>
             <li class="item"><a href="login.php">Log In</a></li>
             <li class="item"><a href="#contact">Contact Us</a></li>
+            <li class="item"><a href="admin_login.php">Admin</a></li>
 
         </ul>
     </nav>

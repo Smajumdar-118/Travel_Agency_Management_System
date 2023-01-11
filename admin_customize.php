@@ -127,7 +127,7 @@ if($num!=0){
             echo "<td>" . $row['Reg_No'] . "</td>";
             echo "<td>" . $row['seats'] . "</td>";
             echo "<td>" . $row['v_id'] . "</td>";
-            echo "<td><a href='admin_delete.php?rn=$row[Reg_No]'>Cancel</a></td>
+            echo "<td><a href='admin_delete_cars.php?rn=$row[Reg_No]'>Cancel</a></td>
             
             
            </tr>";

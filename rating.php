@@ -3,8 +3,8 @@
     if(isset($_POST['name'])){
     $rate = $_POST['name'];
     session_start();
-    $userid = $_SESSION['username'];
-    $mysql = "INSERT INTO `rating` (`user_id`, `rating`) VALUES ('$userid', '$rate')";
+    $userid = $_SESSION['userid'];
+    $mysql = "INSERT INTO `rating` (`customer_id`, `rating`) VALUES ('$userid', '$rate')";
     $query = mysqli_query($conn,$mysql) or die("Unsucessful");
     header("location: TravelWithUs2.php");
 

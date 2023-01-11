@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
       session_start();
       $_SESSION['loggedin'] = true;
       $_SESSION['username'] = $username;
-      header("location: admin.php");
+      header("location: admin_customer.php");
     }
     else{
       $showError = "Invalid Credentials";
@@ -164,6 +164,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
       <li class="item"><a href="#">Home</a></li>
       
       
+      
 
     </ul>
   </nav>
@@ -186,7 +187,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 ?>
 
  
-    <form action="/College Project/login.php" method="POST">
+    <form action="/College Project/admin_login.php" method="POST">
     <div class="container">
         <h1>Administrator Login Only</h1>
         <div class="box">

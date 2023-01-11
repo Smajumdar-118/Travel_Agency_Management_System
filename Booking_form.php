@@ -31,13 +31,14 @@ $result = mysqli_query($conn,$sql);
 
 
 if($result){
-    $sql="INSERT INTO `route` (`Pickup`, `Dest`) VALUES ('$pickup', '$dest')";
+    $sql="INSERT INTO `route` (`Pickup`, `Dest`,`customer_id`) VALUES ('$pickup', '$dest','$idno')";
     $result2 = mysqli_query($conn,$sql);
     if($result2){
     $sql4="select * from route where Pickup='$pickup' ";
     $query = mysqli_query($conn,$sql4) or die("Unsucessful");
     $row = mysqli_fetch_assoc($query);
     $route=$row['Route_id'];
+    
     
     if($result){
         
@@ -56,6 +57,7 @@ session_start();
 $_SESSION['cars'] = $cars;
 $_SESSION['rno'] = $rno;
 $_SESSION['userid'] = $idno;
+
 header("location: payment.php");
 }
 

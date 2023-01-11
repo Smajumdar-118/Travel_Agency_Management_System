@@ -84,7 +84,7 @@
             <li class="item"><a href="#">Home</a></li>
             <li class="item"><a href="admin_customer.php">Customer Details</a></li>
             <li class="item"><a href="admin_booking.php">Booking Details</a></li>
-            <li class="item"><a href="#">Customize Services</a></li>
+            <li class="item"><a href="admin_customize.php">Customize Services</a></li>
             <li class="item"><a href="logout.php">Log Out</a></li>
 
         </ul>

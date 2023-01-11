@@ -84,7 +84,7 @@
             <li class="item"><a href="#">Home</a></li>
             <li class="item"><a href="admin_customer.php">Customer Details</a></li>
             <li class="item"><a href="admin_booking.php">Booking Details</a></li>
-            <li class="item"><a href="#">Customize Services</a></li>
+            <li class="item"><a href="admin_customize.php">Customize Services</a></li>
             <li class="item"><a href="logout.php">Log Out</a></li>
 
         </ul>
@@ -120,7 +120,7 @@ if($num!=0){
             echo "<td>" . $row['customer_id'] . "</td>";
             echo "<td>" . $row['no_of_passengers'] . "</td>";
             echo "<td>" . $row['age'] . "</td>";
-            echo "<td><a href='admin_delete.php?rn=$row[Reg_No]'>Remove</a></td>
+            echo "<td><a href='admin_delete.php?rn=$row[customer_id]'>Remove</a></td>
             
             
            </tr>";
