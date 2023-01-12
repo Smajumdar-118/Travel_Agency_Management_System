@@ -120,10 +120,11 @@ if($num!=0){
             echo "<td>" . $row['customer_id'] . "</td>";
             echo "<td>" . $row['no_of_passengers'] . "</td>";
             echo "<td>" . $row['age'] . "</td>";
-            echo "<td><a href='admin_delete.php?rn=$row[customer_id]'>Remove</a></td>
+            echo "<td>" . $row['user_id'] . "</td>";
+            // echo "<td><a href='admin_delete.php?rn=$row[customer_id]'>Remove</a></td>
             
             
-           </tr>";
+          echo" </tr>";
         }
         echo"</tbody>
     </table>";
