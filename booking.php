@@ -76,8 +76,7 @@
 <body>
     <nav id="navbar">
         <div id="logo">
-            <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg"
-                alt="MyMeal.com">
+            <img src="https://e7.pngegg.com/pngimages/289/542/png-clipart-erg-chebbi-travel-excursion-atlas-mountains-adventure-travel-logo-vehicle.png">
 
         </div>
         <ul>
@@ -96,6 +95,8 @@
 include '_dbconnect.php';
 session_start();
 $id = $_SESSION['username'];
+// $idno = $_SESSION['userid'];
+
 $sql = "select * from customer where user_id = '$id' ";
 $query = mysqli_query($conn,$sql) or die("Unsucessful");
 

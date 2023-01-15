@@ -76,8 +76,7 @@
 <body>
     <nav id="navbar">
         <div id="logo">
-            <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg"
-                alt="MyMeal.com">
+            <img src="https://e7.pngegg.com/pngimages/289/542/png-clipart-erg-chebbi-travel-excursion-atlas-mountains-adventure-travel-logo-vehicle.png">
 
         </div>
         <ul>
@@ -121,7 +120,6 @@ if($num!=0){
             echo "<td>" . $row['no_of_passengers'] . "</td>";
             echo "<td>" . $row['age'] . "</td>";
             echo "<td>" . $row['user_id'] . "</td>";
-            // echo "<td><a href='admin_delete.php?rn=$row[customer_id]'>Remove</a></td>
             
             
           echo" </tr>";

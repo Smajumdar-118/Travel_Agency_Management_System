@@ -92,7 +92,11 @@ section img{
     text-align: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(189 181 241)
+    background-color: rgb(189 181 241);
+    background: url(https://img.freepik.com/free-photo/abstract-luxury-light-cream-beige-brown-like-cotton-silk-texture-pattern-background_1258-71597.jpg?w=1060&t=st=1673673274~exp=1673673874~hmac=059e9abeba5f658e0220f773a97ebaf778bad0d6f62800ae9e24f01d04260cad);
+    /* z-index: -1;
+    position: absolute;
+    content: ""; */
     
     
 }
@@ -124,10 +128,27 @@ section img{
     display: flex;
     text-align: center;
     width: 80%;
-    justify-content: center;
-    font-size: 48px;
+    /* justify-content: center; */
+    /* font-size: 20px; */
     background-color: pink;
+    flex-direction: column;
     
+}
+.desc p{
+    
+    color: black;
+    margin: auto 0px;
+    padding: 14px 60px;
+    font-size: 25px;
+
+}
+.desc h3{
+    margin: 25px 277px;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid red;
+    border-radius: 82px;
+    padding: 8px 0px;
 }
 .p-head{
     font-size: 36px;

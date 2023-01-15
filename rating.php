@@ -6,7 +6,7 @@
     $userid = $_SESSION['userid'];
     $mysql = "INSERT INTO `rating` (`customer_id`, `rating`) VALUES ('$userid', '$rate')";
     $query = mysqli_query($conn,$mysql) or die("Unsucessful");
-    header("location: TravelWithUs2.php");
+    header("location: delete_car.php");
 
 }
 

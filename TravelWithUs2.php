@@ -14,15 +14,12 @@
 
     <nav id="navbar">
         <div id="logo">
-            <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg"
-                alt="MyMeal.com">
+            <img src="https://e7.pngegg.com/pngimages/289/542/png-clipart-erg-chebbi-travel-excursion-atlas-mountains-adventure-travel-logo-vehicle.png">
                 
         </div>
         <ul>
             <li class="item"><a href="#">Home</a></li>
             <li class="item"><a href="#services">Services</a></li>
-            <!-- <li class="item"><a href="signup.php">Sign Up</a></li>
-            <li class="item"><a href="login.php">Log In</a></li> -->
             <li class="item"><a href="#contact">Contact Us</a></li>
             <li class="item"><a href="logout.php">Log Out</a></li>
             <li class="item"><a href="booking.php">My Booking</a></li>

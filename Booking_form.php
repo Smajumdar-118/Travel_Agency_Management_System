@@ -56,7 +56,9 @@ if($result){
 session_start();
 $_SESSION['cars'] = $cars;
 $_SESSION['rno'] = $rno;
+$_SESSION['vehicle'] = $vehicle;
 $_SESSION['userid'] = $idno;
+
 
 header("location: payment.php");
 }
@@ -193,8 +195,7 @@ header("location: payment.php");
 <body>
     <nav id="navbar">
         <div id="logo">
-            <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg"
-                alt="MyMeal.com">
+            <img src="https://e7.pngegg.com/pngimages/289/542/png-clipart-erg-chebbi-travel-excursion-atlas-mountains-adventure-travel-logo-vehicle.png">
         </div>
         <ul>
             <li class="item"><a href="TravelWithUs2.php">Home</a></li>
@@ -206,7 +207,7 @@ header("location: payment.php");
     </nav>
     <div class="container">
 
-        <form action="Booking_form.php" method="post">
+        <form action="Booking_form.php" method="post" >
             <div class="form-group">
                 <label for="name">Name : </label>
                 <input type="text" class="form-control" id="name" name="name">
@@ -261,7 +262,7 @@ header("location: payment.php");
                 <label for="dest">Destination : </label>
                 <input type="text" class="form-control" id="dest" name="dest">
             </div>
-            <button type="submit" class="btn">Register</button>
+            <button type="submit" class="btn" >Register</button>
         </form>
     </div>
     <script type="text/javascript" src="/College Project/jquery.js"></script>

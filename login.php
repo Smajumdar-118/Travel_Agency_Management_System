@@ -158,7 +158,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
   <nav id="navbar">
     <div id="logo">
-      <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg" alt="MyMeal.com">
+      <img src="https://e7.pngegg.com/pngimages/289/542/png-clipart-erg-chebbi-travel-excursion-atlas-mountains-adventure-travel-logo-vehicle.png" alt="MyMeal.com">
     </div>
     <ul>
       <li class="item"><a href="TravelWithUs.php">Home</a></li>

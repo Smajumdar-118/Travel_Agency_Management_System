@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoveWithUs.com</title>
-    <link rel="stylesheet" href="Travel.css">
+    <link rel="stylesheet" href="TravelWithUs.css">
 
 </head>
 
@@ -14,8 +14,7 @@
     
     <nav id="navbar">
         <div id="logo">
-            <img src="https://thumbs.dreamstime.com/z/food-delivery-logo-design-template-134749604.jpg"
-                alt="MyMeal.com">
+            <img src="https://e7.pngegg.com/pngimages/289/542/png-clipart-erg-chebbi-travel-excursion-atlas-mountains-adventure-travel-logo-vehicle.png">
                 
         </div>
         <ul>
@@ -42,7 +41,8 @@
 
 
             <div class="desc">
-                <p>This is 3 seater Car</p>
+                <h3>Introduce With Our Mini Car</h3>
+                <p>Explore the city with ease in one of our top-of-the-line mini cars. Our fleet is designed to provide comfort, style and convenience to travelers. Comfortable seating for up to 4 passengers, ample luggage space, and fuel-efficient engines will ensure a smooth and cost-effective travel experience. All of our cars are regularly maintained and serviced to provide a safe and reliable ride. Enjoy the convenience of our mini cars and make your next trip a memorable one. Book now and experience the difference</p>
             </div>
             <div class="item">
                 <img src="https://blog.savaari.com/wp-content/uploads/2018/12/tata-indica-launch.jpg" alt="" srcset="">
