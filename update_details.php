@@ -1,67 +1,44 @@
 <?php
-if(isset($_POST['name'])){
 include '_dbconnect.php';
-$name = $_POST['name'];
-$age = $_POST['age'];
-$idno = $_POST['idno'];
-$pno = $_POST['pno'];
-$vehicle = $_POST['vehicle'];
-$ac = $_POST['ac'];
-
-$cars = $_POST["cars"];
-$sql2="select * from cars where name='$cars'";
-$query = mysqli_query($conn,$sql2) or die("Unsucessful");
-
-$row = mysqli_fetch_assoc($query);
-$rno=$row['Reg_No'];
-
-
-$fdate = $_POST['fdate'];
-$tdate = $_POST['tdate'];
-$pickup = $_POST['pickup'];
-$dest = $_POST['dest'];
-
-
-if(true){
 session_start();
-$user_id = $_SESSION['username'];
-$sql = "INSERT INTO `customer` (`customer_id`, `name`, `no_of_passengers`, `vehicle_type`, `car_name`, ` accommodation`, `From_Date`, `To_Date`, `pickup`, `destination`, `age`,`user_id`) VALUES ('$idno', '$name', '$pno', '$vehicle', '$cars', '$ac', '$fdate', '$tdate', '$pickup', '$dest', '$age','$user_id')";
-
-$result = mysqli_query($conn,$sql);
-
-
-if($result){
-    $sql="INSERT INTO `route` (`Pickup`, `Dest`,`customer_id`) VALUES ('$pickup', '$dest','$idno')";
-    $result2 = mysqli_query($conn,$sql);
-    if($result2){
-    $sql4="select * from route where Pickup='$pickup' ";
-    $query = mysqli_query($conn,$sql4) or die("Unsucessful");
-    $row = mysqli_fetch_assoc($query);
-    $route=$row['Route_id'];
-    
-    
-    if($result){
+// $id = $_SESSION['username'];
+$id = $_GET['rn'];
+// echo $id;
+if(isset($_GET['name'])){
+        $name = $_GET['name'];
+        $age = $_GET['age'];
+        $idno = $_GET['idno'];
+        $pno = $_GET['pno'];
+        
+        $ac = $_GET['ac'];
         
         
-        $sql3= "INSERT INTO `booked` (`Reg_No`, `name`, `Pickup`, `Dest`, `Fdate`, `Tdate`, `Route_id`, `customer_id`) VALUES ('$rno', '$cars', '$pickup', '$dest', '$fdate', '$tdate', '$route','$idno')";
-        $result2 = mysqli_query($conn,$sql3);
         
-    }
-    }
+        
+        $fdate = $_GET['fdate'];
+        $tdate = $_GET['tdate'];
+        
+        
+        
+        
+        $sql = "UPDATE `customer` SET `customer_id` = '$idno', `name` = '$name', `no_of_passengers` = '$pno', ` accommodation` = '$ac',`From_Date` = '$fdate', `To_Date` = '$tdate', `age` = '$age' WHERE `customer`.`customer_id` = $idno";
+        
+        $result = mysqli_query($conn,$sql);
+        
+        
+        if(true){
+            $sql2="UPDATE `booked` SET `Fdate` = '$fdate', `Tdate` = '$tdate' WHERE `booked`.`customer_id` = $idno";
+            $result2 = mysqli_query($conn,$sql2);
+           
+        
+        
+        }
+        
+        
+        
+        header("location: booking.php");
+        }
 
-
-
-}
-}
-session_start();
-$_SESSION['cars'] = $cars;
-$_SESSION['rno'] = $rno;
-$_SESSION['vehicle'] = $vehicle;
-$_SESSION['userid'] = $idno;
-
-
-header("location: payment.php");
-}
 
 
 ?>
@@ -207,37 +184,25 @@ header("location: payment.php");
     </nav>
     <div class="container">
 
-        <form action="Booking_form.php" method="post" >
+        <form action="update_details.php" method="GET" >
             <div class="form-group">
-                <label for="name">Name : </label>
+                <label for="name">Update Your Name : </label>
                 <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="form-group">
-                <label for="age">Age : </label>
+                <label for="age">Update Age : </label>
                 <input type="number" class="form-control" id="age" name="age">
             </div>
             <div class="form-group">
-                <label for="idno">Addhar No. : </label>
-                <input type="text" class="form-control" id="idno" name="idno">
+                <label for="idno"> Update Addhar No. : </label>
+                <input type="text" value="<?php echo $id; ?>" class="form-control" id="idno" name="idno">
             </div>
             <div class="form-group">
-                <label for="pno">Number of Passenger : </label>
+                <label for="pno">Change Number of Passenger : </label>
                 <input type="number" class="form-control" id="pno" name="pno">
             </div>
 
-            <div class="form-group">
-                <label for="vehicle">Vehicle Type : </label>
-                <select id="vehicle" name="vehicle">
-                    <option value="">Select</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="cars">Car Name : </label>
-                <select id="cars" name="cars">
-                    <option value="">Select</option>
-                </select>
-            </div>
-
+           
             <div class="form-group">
                 <label for="ac">Choose an Option : </label>
                 <select name="ac" name="ac">
@@ -254,18 +219,11 @@ header("location: payment.php");
                 <label for="tdate">Booking Date(TO) : </label>
                 <input type="date" class="form-control" id="tdate" name="tdate">
             </div>
-            <div class="form-group">
-                <label for="pickup">Pick Up Location : </label>
-                <input type="text" class="form-control" id="pickup" name="pickup">
-            </div>
-            <div class="form-group">
-                <label for="dest">Destination : </label>
-                <input type="text" class="form-control" id="dest" name="dest">
-            </div>
-            <button type="submit" class="btn" >Register</button>
+            
+            <button type="submit" name="submit" class="btn" >Update</button>
         </form>
     </div>
-    <script type="text/javascript" src="/College Project/jquery.js"></script>
+    <!-- <script type="text/javascript" src="/College Project/jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             function loadData(type,category_id){
@@ -291,7 +249,45 @@ header("location: payment.php");
             loadData("cardata",vehicle)
         })
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
+
+//<?php
+// if(isset($_POST['name'])){
+//     $name = $_POST['name'];
+//     $age = $_POST['age'];
+//     $idno = $_POST['idno'];
+//     $pno = $_POST['pno'];
+    
+//     $ac = $_POST['ac'];
+    
+    
+    
+    
+//     $fdate = $_POST['fdate'];
+//     $tdate = $_POST['tdate'];
+    
+    
+    
+    
+//     $sql = "UPDATE `customer` SET `customer_id` = '$idno', `name` = '$name', `no_of_passengers` = '$pno', ` accommodation` = '$ac',`From_Date` = '$fdate', `To_Date` = '$tdate', `age` = '$age' WHERE `customer`.`customer_id` = $gid";
+    
+//     $result = mysqli_query($conn,$sql);
+    
+    
+//     if(true){
+//         $sql="UPDATE `booked` SET `Fdate` = '$fdate', `Tdate` = '$tdate' WHERE `booked`.`customer_id` = $idno";
+//         $result2 = mysqli_query($conn,$sql);
+       
+    
+    
+//     }
+    
+    
+    
+//     header("location: booking.php");
+//     }
+// echo $gid;
+//?>

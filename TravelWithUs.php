@@ -40,8 +40,8 @@
         <div class="container">
 
 
-            <div class="desc">
-                <h3>Introduce With Our Mini Car</h3>
+            <div class="desc1">
+                <h3>Introduce With Our Mini Cars</h3>
                 <p>Explore the city with ease in one of our top-of-the-line mini cars. Our fleet is designed to provide comfort, style and convenience to travelers. Comfortable seating for up to 4 passengers, ample luggage space, and fuel-efficient engines will ensure a smooth and cost-effective travel experience. All of our cars are regularly maintained and serviced to provide a safe and reliable ride. Enjoy the convenience of our mini cars and make your next trip a memorable one. Book now and experience the difference</p>
             </div>
             <div class="item">
@@ -52,8 +52,9 @@
         <div class="container">
 
 
-            <div class="desc">
-                <p>This is Sedan Car</p>
+            <div class="desc1">
+                <h3>Our Sedan Cars</h3>
+                <p>Sedan cars in our travel agency offer a comfortable and luxurious transportation option for individuals or small groups. Our vehicles are equipped with air conditioning, comfortable seating, and ample legroom. Entertainment options such as radio and music streaming are also available. Our professional drivers are knowledgeable and experienced, ensuring a safe and enjoyable ride. Whether it's for airport transfer, corporate travel, or a special event, our sedan cars provide a reliable and stylish way to travel. We also offer a wide range of cars to choose from, including luxury models like Mercedes-Benz, Verna, and Honda City, to ensure that you travel in style and comfort</p>
             </div>
             <div class="item">
                 <img src="https://cdni.autocarindia.com/Galleries/20210224105345_Mercedes_Benz_C_Class_2022_front_1.jpg"
@@ -64,8 +65,9 @@
         <div class="container">
 
 
-            <div class="desc">
-                <p>This is SUV</p>
+            <div class="desc1">
+                <h3>Our SUVs</h3>
+                <p>SUV cars in our travel agency offer a spacious and comfortable transportation option for individuals or small groups. Our vehicles are equipped with air conditioning, comfortable seating, and ample legroom, making it perfect for families or groups of friends. Entertainment options such as radio and music streaming are also available. Our professional drivers are knowledgeable and experienced, ensuring a safe and enjoyable ride. Whether it's for airport transfer, corporate travel, or a special event, our SUV cars provide a reliable and stylish way to travel.</p>
             </div>
             <div class="item">
                 <img src="https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/44709/fortuner-exterior-left-front-three-quarter.jpeg?q=75"
@@ -76,8 +78,9 @@
         <div class="container">
 
 
-            <div class="desc">
-                <p>This is Volvo Bus</p>
+            <div class="desc1">
+                <h3>Volvo Buses</h3>
+                <p>Volvo buses in our travel agency offer a comfortable and reliable transportation option for groups and large parties. Our buses are equipped with air conditioning, comfortable seating, and ample legroom, making it perfect for long distance travel. Entertainment options such as Wi-Fi and on-board entertainment systems are also available. Our professional drivers are knowledgeable and experienced, ensuring a safe and enjoyable ride. Whether it's for airport transfer, corporate travel, or a special event, our Volvo buses provide a convenient and stylish way to travel</p>
             </div>
             <div class="item">
                 <img src="https://img.indianautosblog.com/2013/11/Volvo-9400-India.jpg" alt="" srcset="">

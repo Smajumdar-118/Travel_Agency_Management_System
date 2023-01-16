@@ -33,7 +33,7 @@
 
         th {
             border: 2px solid red;
-            padding: 13px 42px;
+            padding: 13px 37px;
             background-color: #66f448;
             color: #0e08f3;
             font-size: 24px;
@@ -101,6 +101,7 @@ $sql = "select * from customer where user_id = '$id' ";
 $query = mysqli_query($conn,$sql) or die("Unsucessful");
 
 $num=mysqli_num_rows($query);
+
 if($num!=0){
   
     
@@ -114,6 +115,7 @@ if($num!=0){
                 <th>Booking Date</th>
                 <th>Pick Up Location</th>
                 <th>Destination</th>
+                <th>Update Details</th>
                 <th>Cancel Your Booking</th>
             </tr>
 
@@ -128,6 +130,7 @@ if($num!=0){
             echo "<td>" . $row['From_Date'] . "</td>";
             echo "<td>" . $row['pickup'] . "</td>";
             echo "<td>" . $row['destination'] . "</td>";
+            echo "<td><a href='update_details.php?rn=$row[customer_id]'>Update</a></td>";
             echo "<td><a href='delete.php?rn=$row[customer_id]'>Cancel</a></td>
             
             
