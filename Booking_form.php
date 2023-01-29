@@ -189,6 +189,9 @@ header("location: payment.php");
             color: black;
             
         }
+        body{
+            background: url(https://images.pexels.com/photos/7130551/pexels-photo-7130551.jpeg)no-repeat center center/cover;
+        }
     </style>
 </head>
 

@@ -11,10 +11,10 @@ html{
 .btn{
     padding: 6px 20px;
     background-color: aqua;
-    border: 4px solid white;
-    margin: 17px;
+    border: 4px solid #8d0376;
+    margin: 32px;
     font-size: 1.5rem;
-    border-radius: 10px;
+    border-radius: 25px;
     cursor: pointer;
 }
 .btn a{

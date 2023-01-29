@@ -95,8 +95,6 @@
 include '_dbconnect.php';
 session_start();
 $id = $_SESSION['username'];
-// $idno = $_SESSION['userid'];
-
 $sql = "select * from customer where user_id = '$id' ";
 $query = mysqli_query($conn,$sql) or die("Unsucessful");
 
