@@ -56,6 +56,9 @@ header("location: admin_customize.php");
         #logo {
             margin: 10px 34px;
         }
+        body{
+            background: url(https://images.pexels.com/photos/7130551/pexels-photo-7130551.jpeg)no-repeat center center/cover;
+        }
 
         #logo img {
             height: 59px;

@@ -79,6 +79,9 @@ if(isset($_GET['name'])){
             margin: 3px 6px;
 
         }
+        body{
+            background: url(https://images.pexels.com/photos/7130551/pexels-photo-7130551.jpeg)no-repeat center center/cover;
+        }
 
         #navbar ul {
             display: flex;
